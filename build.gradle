@@ -13,4 +13,4 @@ dependencies {
     annotationProcessor 'org.spongepowered:spongeapi:7.3.0'
 }
 
-sponge.plugin.id = 'threaderui'
+sponge.plugin.id = 'dynamicui'

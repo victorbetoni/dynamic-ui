@@ -1,6 +1,6 @@
-package net.localthreader.threaderui.impl;
+package net.localthreader.dynamicui.impl;
 
-import net.localthreader.threaderui.InteractableItem;
+import net.localthreader.dynamicui.InteractableItem;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.item.inventory.ItemStack;
 

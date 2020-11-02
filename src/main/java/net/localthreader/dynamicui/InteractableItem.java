@@ -1,11 +1,7 @@
-package net.localthreader.threaderui;
+package net.localthreader.dynamicui;
 
-import com.google.inject.internal.cglib.proxy.$Callback;
-import org.spongepowered.api.CatalogType;
-import org.spongepowered.api.Sponge;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.item.inventory.ItemStack;
-import org.spongepowered.api.util.ResettableBuilder;
 
 import java.util.function.Consumer;
 

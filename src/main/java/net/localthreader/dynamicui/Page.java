@@ -1,9 +1,8 @@
-package net.localthreader.threaderui;
+package net.localthreader.dynamicui;
 
 import org.spongepowered.api.item.inventory.Inventory;
 import org.spongepowered.api.item.inventory.InventoryArchetype;
 import org.spongepowered.api.text.Text;
-import org.spongepowered.api.util.ResettableBuilder;
 
 import java.util.Map;
 

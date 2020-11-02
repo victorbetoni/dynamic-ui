@@ -1,8 +1,8 @@
-package net.localthreader.threaderui.impl;
+package net.localthreader.dynamicui.impl;
 
-import net.localthreader.threaderui.InteractableItem;
-import net.localthreader.threaderui.Page;
-import net.localthreader.threaderui.ThreaderUI;
+import net.localthreader.dynamicui.InteractableItem;
+import net.localthreader.dynamicui.Page;
+import net.localthreader.dynamicui.ThreaderUI;
 import org.spongepowered.api.item.inventory.Inventory;
 import org.spongepowered.api.item.inventory.InventoryArchetype;
 import org.spongepowered.api.text.Text;

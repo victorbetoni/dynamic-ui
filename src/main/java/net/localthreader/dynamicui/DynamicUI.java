@@ -1,4 +1,4 @@
-package net.localthreader.threaderui;
+package net.localthreader.dynamicui;
 
 import com.google.inject.Inject;
 import org.slf4j.Logger;
@@ -8,15 +8,15 @@ import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.plugin.Plugin;
 
 @Plugin(
-        id = "threaderui",
-        name = "ThreaderUI",
+        id = "dynamicui",
+        name = "DynamicUI",
         authors = {
                 "localthreader"
         }
 )
-public class ThreaderUI {
+public class DynamicUI {
 
-    private static ThreaderUI instance;
+    private static DynamicUI instance;
 
     @Inject
     private Logger logger;
@@ -26,7 +26,7 @@ public class ThreaderUI {
         instance = this;
     }
 
-    public static ThreaderUI instance() {
+    public static DynamicUI instance() {
         return instance;
     }
 
