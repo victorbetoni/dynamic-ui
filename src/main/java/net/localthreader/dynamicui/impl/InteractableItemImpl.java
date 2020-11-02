@@ -10,10 +10,12 @@ public class InteractableItemImpl implements InteractableItem {
 
     private ItemStack stack;
     private Consumer<Player> action;
+    private boolean pickable;
 
     public static class Builder implements InteractableItem.Builder {
         private ItemStack stack;
         private Consumer<Player> action;
+        private boolean pickable = false;
 
         @Override
         public Builder item(ItemStack stack) {
@@ -28,8 +30,14 @@ public class InteractableItemImpl implements InteractableItem {
         }
 
         @Override
+        public InteractableItem.Builder pickable() {
+            this.pickable = !pickable;
+            return this;
+        }
+
+        @Override
         public InteractableItem build() {
-            return new InteractableItemImpl(stack, action);
+            return new InteractableItemImpl(stack, action, pickable);
         }
     }
 
@@ -43,8 +51,14 @@ public class InteractableItemImpl implements InteractableItem {
         return action;
     }
 
-    public InteractableItemImpl(ItemStack stack, Consumer<Player> action) {
+    @Override
+    public boolean isPickable() {
+        return pickable;
+    }
+
+    public InteractableItemImpl(ItemStack stack, Consumer<Player> action, boolean pickable) {
         this.stack = stack;
+        this.pickable = pickable;
         this.action = action;
     }
 }

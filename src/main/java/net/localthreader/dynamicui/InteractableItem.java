@@ -11,11 +11,15 @@ public interface InteractableItem {
 
     Consumer<Player> getAction();
 
+    boolean isPickable();
+
     static interface Builder {
 
         Builder item(ItemStack stack);
 
         Builder onClick(Consumer<Player> action);
+
+        Builder pickable();
 
         InteractableItem build();
 
