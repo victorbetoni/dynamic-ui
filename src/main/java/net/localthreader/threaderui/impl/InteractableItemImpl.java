@@ -16,13 +16,15 @@ public class InteractableItemImpl implements InteractableItem {
         private Consumer<Player> action;
 
         @Override
-        public ItemStack item(ItemStack stack) {
-            return null;
+        public Builder item(ItemStack stack) {
+            this.stack = stack;
+            return this;
         }
 
         @Override
-        public Consumer<Player> onClick() {
-            return null;
+        public Builder onClick(Consumer<Player> action) {
+            this.action = action;
+            return this;
         }
 
         @Override
