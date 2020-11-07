@@ -12,6 +12,7 @@ import org.spongepowered.api.item.inventory.InventoryArchetype;
 import org.spongepowered.api.item.inventory.InventoryProperty;
 import org.spongepowered.api.item.inventory.Slot;
 import org.spongepowered.api.item.inventory.property.SlotIndex;
+import org.spongepowered.api.item.inventory.query.QueryOperationTypes;
 import org.spongepowered.api.text.Text;
 
 import java.util.HashMap;
@@ -63,6 +64,8 @@ public class PageImpl implements Page {
                 }
             }
         });
+        inventory = builderInventory.build(DynamicUI.instance().getPlugin());
+        items.forEach((x,y) -> inventory.query(QueryOperationTypes.INVENTORY_PROPERTY.of(SlotIndex.of(x))).offer(y.getItemStack()));
     }
 
     public static class Builder implements Page.Builder {
